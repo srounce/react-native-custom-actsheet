@@ -14,6 +14,9 @@
 #import "RCTConvert.h"
 
 @implementation RCTCustomActionSheet
+{
+    RCTResponseSenderBlock _callback;
+}
 
 @synthesize bridge = _bridge;
 
@@ -33,6 +36,7 @@ RCT_EXPORT_MODULE()
 }
 
 RCT_EXPORT_METHOD(showActionSheetWithOptions:(NSDictionary *)options callback:(RCTResponseSenderBlock)callback) {
+    _callback = callback;
     [_bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, RCTSparseArray *viewRegistry) {
         NSNumber *viewTag = options[@"node"];
         UIView *view = viewRegistry[viewTag];
@@ -106,8 +110,18 @@ RCT_EXPORT_METHOD(showActionSheetWithOptions:(NSDictionary *)options callback:(R
     }];
 }
 
+#pragma mark - IBActionSheetDelegate Implementation
+
 - (void)actionSheet:(IBActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    NSLog(@"button %ld clicked", (long)buttonIndex);
+    _callback(@[@(buttonIndex)]);
+}
+
+- (void)actionSheet:(IBActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex {
+    // do nothing
+}
+
+- (void)actionSheet:(IBActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    // do nothing
 }
 
 @end
