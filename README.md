@@ -1,5 +1,7 @@
 # react-native-custom-actsheet
 
+[![NPM](https://nodei.co/npm/react-native-custom-actsheet.png)](https://nodei.co/npm/react-native-custom-actsheet/)
+
 flexible custom ActionSheet for react-native.
 
 This modules is wrapper for [IBActionSheet](https://github.com/ianb821/IBActionSheet) , which does all real work.
