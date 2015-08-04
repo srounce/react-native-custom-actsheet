@@ -4,6 +4,11 @@ flexible custom ActionSheet for react-native.
 
 This modules is wrapper for [IBActionSheet](https://github.com/ianb821/IBActionSheet) , which does all real work.
 
+## ScreenShot
+
+![Standard](https://raw.github.com/guodong000/react-native-custom-actsheet/master/Pictures/standard.png)
+![colored](https://raw.github.com/guodong000/react-native-custom-actsheet/master/Pictures/colored.png)
+
 ## Example
 
 ```
