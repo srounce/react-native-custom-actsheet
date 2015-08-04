@@ -78,6 +78,12 @@ RCT_EXPORT_METHOD(showActionSheetWithOptions:(NSDictionary *)options callback:(R
         if (options[@"destructiveButtonFont"]) {
             [actionSheet setDestructiveButtonFont:[RCTConvert UIFont:options[@"destructiveButtonFont"]]];
         }
+        if (options[@"shouldCancelOnTouch"]) {
+            actionSheet.shouldCancelOnTouch = ((NSNumber *)options[@"shouldCancelOnTouch"]).boolValue;
+        }
+        if (options[@"blurBackground"]) {
+            actionSheet.blurBackground = ((NSNumber *)options[@"blurBackground"]).boolValue;
+        }
         
         for (int i = 0; i < buttons.count; i++) {
             NSDictionary *button = buttons[i];

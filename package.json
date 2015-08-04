@@ -1,7 +1,7 @@
 {
   "name": "react-native-custom-actsheet",
   "description": "A custom ActionSheet for react-native",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [
     "react-component",
     "react-native",

@@ -8,13 +8,15 @@ This modules is wrapper for [IBActionSheet](https://github.com/ianb821/IBActionS
 
 ```
 ActionSheet.showActionSheetWithOptions({
-  node: React.findNodeHandle(this.refs['view']), 
-  title: 'this is title',
+  node: React.findNodeHandle(this.refs['view']),  // default is RCTRootContentView's react tag
+  title: 'This is a title',
   destructiveButtonTitle: 'Destructive',
   cancelButtonTitle: 'Cancel',
   buttonTextColor: 'yellow',
   buttonBackgroundColor: 'green',
   pressEffect: ActionSheet.PressEffect.Highlight,
+  shouldCancelOnTouch: false,
+  blurBackground: false,
   font: {
     fontFamily: 'Bradley Hand',
     fontSize: 14,
