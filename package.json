@@ -1,0 +1,25 @@
+{
+  "name": "react-native-custom-actsheet",
+  "description": "A custom ActionSheet for react-native",
+  "version": "0.0.1",
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "custom",
+    "action",
+    "sheet"
+  ],
+  "bugs": {
+    "url": "https://github.com/guodong000/react-native-custom-actsheet/issues"
+  },
+  "license": "Apache License 2.0",
+  "main": "CustomActionSheet.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guodong000/react-native-custom-actsheet.git"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.4.0 || 0.5.0-rc1 || 0.6.0-rc || 0.7.0-rc || 0.7.0-rc.2 || 0.8.0-rc || 0.8.0-rc.2 || 0.9.0-rc"
+  }
+}
