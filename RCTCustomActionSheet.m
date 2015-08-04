@@ -86,7 +86,7 @@ RCT_EXPORT_METHOD(showActionSheetWithOptions:(NSDictionary *)options callback:(R
                 index = i + 1;
             }
             if (button[@"textColor"]) {
-                [actionSheet setButtonTextColor:[RCTConvert UIColor:button[@"color"]]
+                [actionSheet setButtonTextColor:[RCTConvert UIColor:button[@"textColor"]]
                                forButtonAtIndex:index];
             }
             if (button[@"backgroundColor"]) {
