@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react-native');
-var NativeModules = require('NativeModules');
+var NativeModules = React.NativeModules;
 
 var PressEffect = {
   'Fades': NativeModules.CustomActionSheet.FadeOnPress,
